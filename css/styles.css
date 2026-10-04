@@ -1,0 +1,422 @@
+/* ==========================================================================
+   SIMIJACA EXPLORE - ESTILOS GLOBALES Y PALETA DE COLORES
+   ========================================================================== */
+
+:root {
+    /* Paleta de Colores Inspirada en Cundinamarca */
+    --primary-color: #1b4d3e;       /* Verde esmeralda profundo / Naturaleza */
+    --primary-hover: #13382d;
+    --secondary-color: #d96b27;     /* Terracota / Tradición y calidez */
+    --secondary-hover: #b85419;
+    --accent-color: #e9c46a;        /* Dorado suave / Eventos y cultura */
+    --bg-color: #f8f9fa;            /* Blanco hueso / Fondo principal */
+    --surface-color: #ffffff;       /* Blanco puro / Tarjetas y contenedores */
+    --text-primary: #212529;        /* Texto principal */
+    --text-secondary: #6c757d;      /* Texto secundario y subtítulos */
+    --border-color: #e9ecef;        /* Borde sutil */
+    
+    /* Sombras y Elevación */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+    /* Transiciones y Bordes */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   HEADER & NAVBAR
+   ========================================================================== */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-sm);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: -0.5px;
+}
+
+.logo h1 span {
+    color: var(--secondary-color);
+    font-weight: 300;
+}
+
+#nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.8rem;
+}
+
+#nav-links a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+#nav-links a:hover,
+#nav-links a.active {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* Botón Selector Bilingüe ES/EN */
+.btn-lang {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.btn-lang:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+
+.hero {
+    background: linear-gradient(rgba(27, 77, 62, 0.75), rgba(0, 0, 0, 0.6)), 
+                url('../assets/images/simijaca-hero.jpg') center/cover no-repeat;
+    color: #ffffff;
+    text-align: center;
+    padding: 5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 600px;
+    opacity: 0.95;
+}
+
+/* ==========================================================================
+   SECCIÓN DEL MAPA INTERACTIVO
+   ========================================================================== */
+
+.map-section {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.map-section h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+#map {
+    height: 450px;
+    width: 100%;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    z-index: 1;
+}
+
+/* Estilos de Popups de Leaflet */
+.leaflet-popup-content-wrapper {
+    border-radius: var(--radius-sm);
+    padding: 0.5rem;
+}
+
+.leaflet-popup-content img {
+    border-radius: var(--radius-sm);
+    margin-top: 0.4rem;
+}
+
+/* ==========================================================================
+   GRID DE SECCIONES Y TARJETAS
+   ========================================================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 0.3rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.experiences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Tarjeta Individual */
+.card {
+    background-color: var(--surface-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-img-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.card:hover .card-img-container img {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-title {
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+/* Botones dentro de Tarjetas */
+.btn-sub {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.88rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.btn-sub:hover {
+    background-color: var(--secondary-hover);
+}
+
+/* ==========================================================================
+   SECCIÓN DE CRÉDITOS Y FUENTES (NORMAS APA)
+   ========================================================================== */
+
+.credits-section {
+    background-color: #edf2f0;
+    padding: 3rem 1.5rem;
+    margin-top: 4rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.credits-list {
+    list-style-type: none;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+}
+
+.credits-list li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    text-indent: -1.5rem; /* Sangría francesa tipo APA */
+}
+
+/* ==========================================================================
+   DISEÑO RESPONSIVE (MEDIA QUERIES)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    #nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    #map {
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+
+    #nav-links a {
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        padding: 3.5rem 1rem;
+    }
+
+    .experiences-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+/* Menú desplegable (Dropdown) */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-card, #ffffff);
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    border-radius: 6px;
+    padding: 0.5rem 0;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    display: block;
+    width: 100%;
+}
+
+.dropdown-menu a {
+    color: var(--text-primary, #2d3748);
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Botones de subnavegación dentro de cada categoría */
+.subnav-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color, #e2e8f0);
+    padding-bottom: 0.5rem;
+}
+
+.tab-btn {
+    padding: 0.5rem 1.2rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-secondary, #718096);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+    background-color: var(--primary-color, #2c5282);
+    color: #ffffff;
+}

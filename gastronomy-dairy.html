@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronomía - Lácteos y Postres | Simijaca Explore</title>
+    <!-- NOTA: Usa 'css/style.css' en singular según la estructura de tus archivos en VS Code -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Encabezado y Navegación Principal con Dropdowns -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>Simijaca<span>Explore</span></h1>
+        </div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="index.html" data-es="Inicio" data-en="Home">Inicio</a></li>
+                
+                <!-- Menú desplegable Gastronomía -->
+                <li class="dropdown">
+                    <a href="gastronomy-dairy.html" class="active" data-es="Gastronomía" data-en="Gastronomy">Gastronomía ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="gastronomy-dairy.html" data-es="Lácteos y Postres" data-en="Dairy & Desserts">Lácteos y Postres</a></li>
+                        <li><a href="gastronomy-dishes.html" data-es="Platos Típicos" data-en="Traditional Dishes">Platos Típicos</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menú desplegable Cultura -->
+                <li class="dropdown">
+                    <a href="culture-architecture.html" data-es="Cultura" data-en="Culture">Cultura ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="culture-architecture.html" data-es="Arquitectura" data-en="Architecture">Arquitectura</a></li>
+                        <li><a href="culture-crafts.html" data-es="Artesanías" data-en="Crafts">Artesanías</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menú desplegable Ecoturismo -->
+                <li class="dropdown">
+                    <a href="ecotourism-hiking.html" data-es="Ecoturismo" data-en="Ecotourism">Ecoturismo ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ecotourism-hiking.html" data-es="Senderismo" data-en="Hiking">Senderismo</a></li>
+                        <li><a href="ecotourism-viewpoints.html" data-es="Miradores" data-en="Viewpoints">Miradores</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menú desplegable Eventos -->
+                <li class="dropdown">
+                    <a href="events-festivals.html" data-es="Eventos" data-en="Events">Eventos ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="events-festivals.html" data-es="Ferias y Fiestas" data-en="Fairs & Festivals">Ferias y Fiestas</a></li>
+                        <li><a href="events-cultural.html" data-es="Talleres Culturales" data-en="Cultural Workshops">Talleres Culturales</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="credits.html" data-es="Créditos APA" data-en="APA Credits">Créditos APA</a></li>
+            </ul>
+        </nav>
+        <button id="lang-toggle" class="btn-lang">
+            <span id="lang-label">EN</span>
+        </button>
+    </header>
+
+    <main class="container">
+        <!-- Pestañas de Subnavegación entre Subsecciones de Gastronomía -->
+        <div class="subnav-tabs">
+            <a href="gastronomy-dairy.html" class="tab-btn active" data-es="Lácteos y Postres" data-en="Dairy & Desserts">Lácteos y Postres</a>
+            <a href="gastronomy-dishes.html" class="tab-btn" data-es="Platos Típicos" data-en="Traditional Dishes">Platos Típicos</a>
+        </div>
+
+        <h2 class="section-title" data-es="Lácteos y Postres Tradicionales" data-en="Traditional Dairy & Desserts">Lácteos y Postres Tradicionales</h2>
+        <p style="margin-bottom: 2rem; color: var(--text-secondary);" data-es="Descubre la riqueza lechera y las recetas dulces artesanales que identifican al municipio de Simijaca." data-en="Discover the dairy richness and handcrafted sweet recipes that define the municipality of Simijaca.">Descubre la riqueza lechera y las recetas dulces artesanales que identifican al municipio de Simijaca.</p>
+
+        <div class="experiences-grid">
+            <article class="card">
+                <div class="card-img-container">
+                    <img src="assets/images/queso-hoja.jpg" alt="Queso de Hoja Simijense">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title" data-es="Queso de Hoja Simijense" data-en="Simijaca Leaf Cheese">Queso de Hoja Simijense</h3>
+                    <p class="card-text" data-es="Queso artesanal fresco envuelto en hoja de plátano o bijao, de textura suave y sabor característico de la cuenca lechera." data-en="Fresh artisanal cheese wrapped in banana or bijao leaf, with a soft texture and characteristic dairy flavor.">Queso artesanal fresco envuelto en hoja de plátano o bijao, de textura suave y sabor característico de la cuenca lechera.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img-container">
+                    <img src="assets/images/arequipe-artesanal.jpg" alt="Arequipe Artesanal">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title" data-es="Arequipe Artesanal" data-en="Artisanal Milk Caramel">Arequipe Artesanal</h3>
+                    <p class="card-text" data-es="Dulce de leche elaborado a fuego lento en paila de cobre según la receta tradicional de los hatos locales." data-en="Traditional milk caramel slow-cooked in copper cauldrons following local farm recipes.">Dulce de leche elaborado a fuego lento en paila de cobre según la receta tradicional de los hatos locales.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img-container">
+                    <img src="assets/images/cuajada-melao.jpg" alt="Cuajada con Melao">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title" data-es="Cuajada con Melao" data-en="Curd with Sugarcane Syrup">Cuajada con Melao</h3>
+                    <p class="card-text" data-es="Postre típico andino que combina la cuajada fresca con almíbar tibio de panela de la región." data-en="Typical Andean dessert combining fresh curd cheese with warm regional sugarcane molasses.">Postre típico andino que combina la cuajada fresca con almíbar tibio de panela de la región.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

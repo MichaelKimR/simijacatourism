@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronomía - Platos Típicos | Simijaca Explore</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Encabezado y Navegación Principal con Dropdowns -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>Simijaca<span>Explore</span></h1>
+        </div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="index.html" data-es="Inicio" data-en="Home">Inicio</a></li>
+                
+                <!-- Menú desplegable Gastronomía -->
+                <li class="dropdown">
+                    <a href="gastronomy-dairy.html" class="active" data-es="Gastronomía" data-en="Gastronomy">Gastronomía ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="gastronomy-dairy.html" data-es="Lácteos y Postres" data-en="Dairy & Desserts">Lácteos y Postres</a></li>
+                        <li><a href="gastronomy-dishes.html" data-es="Platos Típicos" data-en="Traditional Dishes">Platos Típicos</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menú desplegable Cultura -->
+                <li class="dropdown">
+                    <a href="culture-architecture.html" data-es="Cultura" data-en="Culture">Cultura ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="culture-architecture.html" data-es="Arquitectura" data-en="Architecture">Arquitectura</a></li>
+                        <li><a href="culture-crafts.html" data-es="Artesanías" data-en="Crafts">Artesanías</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menú desplegable Ecoturismo -->
+                <li class="dropdown">
+                    <a href="ecotourism-hiking.html" data-es="Ecoturismo" data-en="Ecotourism">Ecoturismo ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ecotourism-hiking.html" data-es="Senderismo" data-en="Hiking">Senderismo</a></li>
+                        <li><a href="ecotourism-viewpoints.html" data-es="Miradores" data-en="Viewpoints">Miradores</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menú desplegable Eventos -->
+                <li class="dropdown">
+                    <a href="events-festivals.html" data-es="Eventos" data-en="Events">Eventos ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="events-festivals.html" data-es="Ferias y Fiestas" data-en="Fairs & Festivals">Ferias y Fiestas</a></li>
+                        <li><a href="events-cultural.html" data-es="Talleres Culturales" data-en="Cultural Workshops">Talleres Culturales</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="credits.html" data-es="Créditos APA" data-en="APA Credits">Créditos APA</a></li>
+            </ul>
+        </nav>
+        <button id="lang-toggle" class="btn-lang">
+            <span id="lang-label">EN</span>
+        </button>
+    </header>
+
+    <main class="container">
+        <!-- Pestañas de Subnavegación entre Subsecciones de Gastronomía -->
+        <div class="subnav-tabs">
+            <a href="gastronomy-dairy.html" class="tab-btn" data-es="Lácteos y Postres" data-en="Dairy & Desserts">Lácteos y Postres</a>
+            <a href="gastronomy-dishes.html" class="tab-btn active" data-es="Platos Típicos" data-en="Traditional Dishes">Platos Típicos</a>
+        </div>
+
+        <h2 class="section-title" data-es="Platos Típicos Campesinos" data-en="Traditional Farmhouse Dishes">Platos Típicos Campesinos</h2>
+        <p style="margin-bottom: 2rem; color: var(--text-secondary);" data-es="Explora la gastronomía criolla y las recetas ancestrales preparadas con ingredientes de la sabana cundiboyacense." data-en="Explore creole cuisine and ancestral recipes prepared with ingredients from the highlands.">Explora la gastronomía criolla y las recetas ancestrales preparadas con ingredientes de la sabana cundiboyacense.</p>
+
+        <div class="experiences-grid">
+            <!-- Experiencia 1 -->
+            <article class="card">
+                <div class="card-img-container">
+                    <img src="assets/images/sancocho-gallina.jpg" alt="Sancocho de Gallina Criolla">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title" data-es="Sancocho de Gallina Criolla" data-en="Free-Range Chicken Soup">Sancocho de Gallina Criolla</h3>
+                    <p class="card-text" data-es="Sopa tradicional cocinada en fogón de leña con tubérculos locales, mazorca fresca y especias de la región." data-en="Traditional soup cooked over wood fire with local root vegetables, fresh corn, and regional herbs.">Sopa tradicional cocinada en fogón de leña con tubérculos locales, mazorca fresca y especias de la región.</p>
+                </div>
+            </article>
+
+            <!-- Experiencia 2 -->
+            <article class="card">
+                <div class="card-img-container">
+                    <img src="assets/images/almojabanas-masijos.jpg" alt="Almojábanas y Masijos Tradicionales">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title" data-es="Almojábanas y Masijos" data-en="Traditional Baked Cheese Pastries">Almojábanas y Masijos</h3>
+                    <p class="card-text" data-es="Aparejos horneados a base de harina de maíz y cuajada fresca, acompañamiento ideal para la chicha o el chocolate." data-en="Baked cornmeal pastries with fresh cheese curd, ideal with traditional hot chocolate or chicha.">Aparejos horneados a base de harina de maíz y cuajada fresca, acompañamiento ideal para la chicha o el chocolate.</p>
+                </div>
+            </article>
+
+            <!-- Experiencia 3 -->
+            <article class="card">
+                <div class="card-img-container">
+                    <img src="assets/images/chicha-artesanal.jpg" alt="Chicha de Maíz Ancestral">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title" data-es="Chicha de Maíz Ancestral" data-en="Ancestral Corn Chicha">Chicha de Maíz Ancestral</h3>
+                    <p class="card-text" data-es="Bebida fermentada tradicional a base de maíz amarillo y panela, referente cultural de la herencia Muisca." data-en="Traditional fermented drink made from yellow corn and sugarcane, a cultural remnant of Muisca heritage.">Bebida fermentada tradicional a base de maíz amarillo y panela, referente cultural de la herencia Muisca.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

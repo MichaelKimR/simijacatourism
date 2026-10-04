@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Culturales | Simijaca Explore</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <h1>Simijaca<span>Explore</span></h1>
+        </div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="index.html" data-es="Inicio" data-en="Home">Inicio</a></li>
+                
+                <li class="dropdown">
+                    <a href="gastronomy-dairy.html" data-es="Gastronomía" data-en="Gastronomy">Gastronomía ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="gastronomy-dairy.html" data-es="Lácteos y Postres" data-en="Dairy & Desserts">Lácteos y Postres</a></li>
+                        <li><a href="gastronomy-dishes.html" data-es="Platos Típicos" data-en="Traditional Dishes">Platos Típicos</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="culture-architecture.html" data-es="Cultura" data-en="Culture">Cultura ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="culture-architecture.html" data-es="Arquitectura" data-en="Architecture">Arquitectura</a></li>
+                        <li><a href="culture-crafts.html" data-es="Artesanías" data-en="Crafts">Artesanías</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="ecotourism-hiking.html" data-es="Ecoturismo" data-en="Ecotourism">Ecoturismo ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ecotourism-hiking.html" data-es="Senderismo" data-en="Hiking">Senderismo</a></li>
+                        <li><a href="ecotourism-viewpoints.html" data-es="Miradores" data-en="Viewpoints">Miradores</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="events-festivals.html" class="active" data-es="Eventos" data-en="Events">Eventos ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="events-festivals.html" data-es="Ferias y Fiestas" data-en="Fairs & Festivals">Ferias y Fiestas</a></li>
+                        <li><a href="events-cultural.html" data-es="Talleres Culturales" data-en="Cultural Workshops">Talleres Culturales</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="credits.html" data-es="Créditos APA" data-en="APA Credits">Créditos APA</a></li>
+            </ul>
+        </nav>
+        <button id="lang-toggle" class="btn-lang">
+            <span id="lang-label">EN</span>
+        </button>
+    </header>
+
+    <main class="container">
+        <div class="subnav-tabs">
+            <a href="events-festivals.html" class="tab-btn" data-es="Ferias y Fiestas" data-en="Fairs & Festivals">Ferias y Fiestas</a>
+            <a href="events-cultural.html" class="tab-btn active" data-es="Talleres Culturales" data-en="Cultural Workshops">Talleres Culturales</a>
+        </div>
+
+        <h2 class="section-title" data-es="Talleres y Encuentros Culturales" data-en="Cultural Workshops & Meetings">Talleres y Encuentros Culturales</h2>
+        <p style="margin-bottom: 2rem; color: var(--text-secondary);" data-es="Actividades participativas, muestras artísticas y programas de formación patrimonial abiertos al público." data-en="Participatory activities, artistic showcases, and heritage training programs open to the public.">Actividades participativas, muestras artísticas y programas de formación patrimonial abiertos al público.</p>
+
+        <div class="experiences-grid">
+            <article class="card">
+                <div class="card-img-container">
+                    <img src="assets/images/taller-musica.jpg" alt="Encuentro de Música Campesina">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title" data-es="Festival de Música Campesina" data-en="Peasant Music Festival">Festival de Música Campesina</h3>
+                    <p class="card-text" data-es="Muestra musical de tiple, requinto y guitarras con agrupaciones locales de música carranguera y tradicional." data-en="Musical showcase of tiple and guitars featuring local Carranga and traditional folk bands.">Muestra musical de tiple, requinto y guitarras con agrupaciones locales de música carranguera y tradicional.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img-container">
+                    <img src="assets/images/taller-hilado.jpg" alt="Taller Demostrativo de Hilado">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title" data-es="Taller Demostrativo de Hilado" data-en="Spinning & Weaving Workshop">Taller Demostrativo de Hilado</h3>
+                    <p class="card-text" data-es="Espacio interactivo donde portadores de la tradición enseñan la preparación y el tinturado de la lana de oveja." data-en="Interactive space where tradition bearers teach sheep wool preparation and natural dyeing.">Espacio interactivo where tradition bearers teach sheep wool preparation and natural dyeing.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img-container">
+                    <img src="assets/images/feria-gastronomica.jpg" alt="Muestra Gastronómica Regional">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title" data-es="Muestra Gastronómica Regional" data-en="Regional Food Showcase">Muestra Gastronómica Regional</h3>
+                    <p class="card-text" data-es="Jornada de degustación de postres lácteos, masijos y bebidas tradicionales preparadas por cocineras locales." data-en="Tasting day featuring dairy desserts, pastries, and traditional beverages prepared by local cooks.">Jornada de degustación de postres lácteos, masijos y bebidas tradicionales preparadas por cocineras locales.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

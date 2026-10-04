@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simijaca Turística - Inicio</title>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Leaflet.js (Mapa Interactivo) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+    <!-- Encabezado y Navegación Principal con Dropdowns -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>Simijaca<span>Explore</span></h1>
+        </div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="index.html" class="active" data-es="Inicio" data-en="Home">Inicio</a></li>
+                
+                <!-- Menú desplegable Gastronomía -->
+                <li class="dropdown">
+                    <a href="gastronomy-dairy.html" data-es="Gastronomía" data-en="Gastronomy">Gastronomía ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="gastronomy-dairy.html" data-es="Lácteos y Postres" data-en="Dairy & Desserts">Lácteos y Postres</a></li>
+                        <li><a href="gastronomy-dishes.html" data-es="Platos Típicos" data-en="Traditional Dishes">Platos Típicos</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menú desplegable Cultura -->
+                <li class="dropdown">
+                    <a href="culture-architecture.html" data-es="Cultura" data-en="Culture">Cultura ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="culture-architecture.html" data-es="Arquitectura" data-en="Architecture">Arquitectura</a></li>
+                        <li><a href="culture-crafts.html" data-es="Artesanías" data-en="Crafts">Artesanías</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menú desplegable Ecoturismo -->
+                <li class="dropdown">
+                    <a href="ecotourism-hiking.html" data-es="Ecoturismo" data-en="Ecotourism">Ecoturismo ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ecotourism-hiking.html" data-es="Senderismo" data-en="Hiking">Senderismo</a></li>
+                        <li><a href="ecotourism-viewpoints.html" data-es="Miradores" data-en="Viewpoints">Miradores</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menú desplegable Eventos -->
+                <li class="dropdown">
+                    <a href="events-festivals.html" data-es="Eventos" data-en="Events">Eventos ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="events-festivals.html" data-es="Ferias y Fiestas" data-en="Fairs & Festivals">Ferias y Fiestas</a></li>
+                        <li><a href="events-cultural.html" data-es="Talleres Culturales" data-en="Cultural Workshops">Talleres Culturales</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="credits.html" data-es="Créditos APA" data-en="APA Credits">Créditos APA</a></li>
+            </ul>
+        </nav>
+        <!-- Selector Bilingüe ES/EN -->
+        <button id="lang-toggle" class="btn-lang">
+            <span id="lang-label">EN</span>
+        </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2 data-es="Descubre la Magia de Simijaca" data-en="Discover the Magic of Simijaca">Descubre la Magia de Simijaca</h2>
+        <p data-es="Rutas turísticas, tradición y naturaleza en Cundinamarca" data-en="Tourist routes, tradition, and nature in Cundinamarca">Rutas turísticas, tradición y naturaleza en Cundinamarca</p>
+    </section>
+
+    <!-- Sección del Mapa Interactivo (Carga las 24 experiencias) -->
+    <section class="map-section">
+        <h2 data-es="Mapa Interactivo de Rutas" data-en="Interactive Route Map">Mapa Interactivo de Rutas</h2>
+        <div id="map"></div>
+    </section>
+
+    <!-- Accesos Directos a las 4 Secciones Principales -->
+    <main class="container">
+        <h2 class="section-title" data-es="Explora las Categorías" data-en="Explore Categories">Explora las Categorías</h2>
+        
+        <div class="experiences-grid">
+            <!-- Categoría 1: Gastronomía -->
+            <article class="card">
+                <div class="card-body">
+                    <h3 class="card-title" data-es="Gastronomía Local" data-en="Local Gastronomy">Gastronomía Local</h3>
+                    <p class="card-text" data-es="Lácteos, amasijos tradicionales y platos típicos del municipio." data-en="Dairy, traditional pastries, and typical local dishes.">Lácteos, amasijos tradicionales y platos típicos del municipio.</p>
+                    <a href="gastronomy-dairy.html" class="btn-sub" style="margin-top:1rem; display:inline-block;" data-es="Ver Experiencias" data-en="View Experiences">Ver Experiencias</a>
+                </div>
+            </article>
+
+            <!-- Categoría 2: Cultura -->
+            <article class="card">
+                <div class="card-body">
+                    <h3 class="card-title" data-es="Cultura e Historia" data-en="Culture & History">Cultura e Historia</h3>
+                    <p class="card-text" data-es="Patrimonio arquitectónico, templo parroquial y tradiciones." data-en="Architectural heritage, parish church, and traditions.">Patrimonio arquitectónico, templo parroquial y tradiciones.</p>
+                    <a href="culture-architecture.html" class="btn-sub" style="margin-top:1rem; display:inline-block;" data-es="Ver Experiencias" data-en="View Experiences">Ver Experiencias</a>
+                </div>
+            </article>
+
+            <!-- Categoría 3: Ecoturismo -->
+            <article class="card">
+                <div class="card-body">
+                    <h3 class="card-title" data-es="Ecoturismo" data-en="Ecotourism">Ecoturismo</h3>
+                    <p class="card-text" data-es="Senderismo, cerros tutelares y flora nativa del valle." data-en="Hiking, local hills, and native valley flora.">Senderismo, cerros tutelares y flora nativa del valle.</p>
+                    <a href="ecotourism-hiking.html" class="btn-sub" style="margin-top:1rem; display:inline-block;" data-es="Ver Experiencias" data-en="View Experiences">Ver Experiencias</a>
+                </div>
+            </article>
+
+            <!-- Categoría 4: Eventos -->
+            <article class="card">
+                <div class="card-body">
+                    <h3 class="card-title" data-es="Eventos y Festividades" data-en="Events & Festivals">Eventos y Festividades</h3>
+                    <p class="card-text" data-es="Ferias patronales, desfiles y encuentros comunitarios." data-en="Patronal fairs, parades, and community events.">Ferias patronales, desfiles y encuentros comunitarios.</p>
+                    <a href="events-festivals.html" class="btn-sub" style="margin-top:1rem; display:inline-block;" data-es="Ver Experiencias" data-en="View Experiences">Ver Experiencias</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Scripts JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

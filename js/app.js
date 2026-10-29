@@ -45,3 +45,26 @@ document.addEventListener('DOMContentLoaded', () => {
         langBtn.addEventListener('click', toggleLanguage);
     }
 });
+// --- FUNCIONALIDAD BOTÓN VOLVER ARRIBA ---
+document.addEventListener('DOMContentLoaded', () => {
+    const backToTopBtn = document.getElementById('btn-back-to-top');
+
+    if (backToTopBtn) {
+        // Mostrar u ocultar el botón al hacer scroll
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        // Subir suavemente al hacer clic
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});

@@ -448,3 +448,35 @@ body {
     height: 100%;
     border: none;
 }
+
+/* --- BOTÓN VOLVER ARRIBA (USABILIDAD) --- */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none; /* Se oculta por defecto hasta hacer scroll */
+    background-color: var(--primary-color, #2b6cb0);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: #1a4971; /* Azul más oscuro al pasar el cursor */
+    transform: translateY(-5px); /* Se levanta un poco */
+}
+
+/* Clase que se activa con JavaScript cuando el usuario baja */
+.back-to-top.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

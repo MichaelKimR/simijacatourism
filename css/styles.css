@@ -480,3 +480,35 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+/* --- ADAPTABILIDAD NAVBAR (MITIGACIÓN PARCIAL MÓVIL) --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Apila el logo arriba y el menú abajo */
+        padding: 1rem;
+    }
+    
+    #nav-links {
+        display: flex;
+        flex-wrap: wrap; /* Permite que los enlaces bajen a la siguiente línea si no caben */
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 1rem 0 0 0;
+    }
+
+    #nav-links li {
+        margin: 0.2rem; /* Espaciado ligero para que no queden pegados al saltar de línea */
+    }
+    
+    /* Ajuste opcional para que los menús desplegables no se corten en móvil */
+    .dropdown-menu {
+        position: static;
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}

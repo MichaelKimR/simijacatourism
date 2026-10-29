@@ -211,20 +211,22 @@ body {
 }
 
 /* Tarjeta Individual */
+/* --- ESTILO BASE DE LA TARJETA --- */
 .card {
-    background-color: var(--surface-color);
-    border-radius: var(--radius-md);
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--border-color);
-    transition: var(--transition);
-    display: flex;
-    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra inicial sutil */
+    background-color: var(--card-bg, #ffffff);
+    
+    /* Esta línea es clave: hace que el movimiento sea suave y no un salto brusco */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
+/* --- NUEVO EFECTO HOVER (RETROALIMENTACIÓN VISUAL UX) --- */
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    transform: scale(1.02); /* Hace la tarjeta un 2% más grande */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Aumenta la sombra para dar efecto de "flotar" */
+    cursor: pointer;
 }
 
 .card-img-container {
